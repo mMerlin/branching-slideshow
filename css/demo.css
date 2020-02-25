@@ -1,0 +1,36 @@
+/* slide content styling */
+
+/* add simple transition to slide changes */
+.branching-slideshow > * {
+    -webkit-transition: opacity 1.2s;
+    transition: opacity 1.2s;
+}
+
+.branching-slideshow > * img {
+    width: 100%;
+}
+
+/*removes the gap if you put a border on the slideshow wrapper element */
+/* .branching-slideshow {
+  line-height: 0;
+} */
+
+/* restores line-height to the child element*/
+/* figcaption {
+  line-height: 1.5;
+} */
+
+.branching-slideshow figcaption {
+    /* position: absolute; */
+    font-family: sans-serif;
+    font-size: .8em;
+    bottom: .75em;
+    right: .35em;
+    padding: .25em;
+    color: #fff;
+    background: #000;
+    background: rgba(0,0,0, .25);
+}
+.branching-slideshow .current-slide figcaption {
+    z-index: 3;
+}

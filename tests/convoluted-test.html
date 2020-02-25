@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Convoluted slides test 1</title>
+
+    <link rel="stylesheet" href="../css/branching-slideshow.css">
+    <link rel="stylesheet" href="css/common-test.css">
+</head>
+<body>
+    <h1>Convoluted Slideshow Test</h1>
+    <p>Use and abuse the features and capabilities of the slide show.  This does things, and combinations of things, that should never be done for real web page.  To show that it actually works, and push the code close to the limits.</p>
+    <span class="branching-slideshow" data-full-screen="true">
+        <section data-forward-labels="next,»">
+            <h2>Slide header</h2>
+            <p>Slides can be contained in almost anything.  Typically all slides in a single slideshow will use the same slide wrapper element, but that is not a technical requirement.  This slide is in a section element.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+        <slide>
+            <h2>Slide header</h2>
+            <p>This slide is in a custom `slide` element.  Most browsers in use will allow new elements to be used in html documents.  The developer is just responsible for defined all of the styling for it.  There are no defaults to fall back on.  Which can be use in some cases, because it is less likely that some other browser will handle it differently</p>
+            <ul>
+                <li>Not generally recommended, but the slide show supports it</li>
+                <li>Does not even need any special setup</li>
+                <li>Leave the `data-selector` attribute off of the slide show element, and the defaults will find it</li>
+            </ul>
+        </slide>
+        <span>
+            <h2>Slide header</h2>
+            <p>This slide is in a `span` element.  That is normally used inline, but the slide show styling will automatically flip it to block.  When the selectors match it to a slide context.</p>
+            <table>
+                <thead>
+                    <tr><th>head 1</th><th>head 2</th><th>head 3</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>data 1.1</td><td>data 1.2</td><td>data 1.3</td></tr>
+                    <tr><td>data 2.1</td><td>data 2.2</td><td>data 2.3</td></tr>
+                    <tr><td>data 3.1</td><td>data 3.2</td><td>data 3.3</td></tr>
+                </tbody>
+            </table>
+        </span>
+        <em>
+            <h2>Slide Header</h2>
+            <p>How about a slide wrapped up by an `em` tag?  That is what this one does</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Euismod in pellentesque massa placerat duis. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Enim lobortis scelerisque fermentum dui faucibus in ornare quam. Leo a diam sollicitudin tempor id eu. Ac orci phasellus egestas tellus. Elementum pulvinar etiam non quam lacus suspendisse. In dictum non consectetur a erat nam. Convallis posuere morbi leo urna molestie at elementum. Elementum tempus egestas sed sed risus pretium quam.</p>
+        </em>
+        <ul>
+            <li><b>Fake slide header</b></li>
+            <li>This slide is the contents of an unordered list</li>
+            <li>Lots of things work, which means minimal changes to turn your normal html blocks of content into fully functional slides</li>
+        </ul>
+    </span>
+
+    <script src="../js/branching-slideshow.js"></script>
+</body>
+</html>

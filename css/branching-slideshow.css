@@ -1,0 +1,137 @@
+/* branching slide show management */
+/* Branching Slideshow version 0.1.0 */
+
+.branching-slideshow {
+  display: block;
+  position: relative;
+}
+
+.branching-slideshow:focus {
+  outline: 0;
+}
+
+.branching-slideshow > * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.branching-slideshow .current-slide {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 1;
+  position: relative; /* positioning (only) the current slide relative gives the parent the proper height to tie the navigation controls too */
+  padding-top: 0.1px; /* fix up the unknown vertical jump: don't why this fixes it either */
+  z-index: 2;
+}
+
+.branching-slideshow > .slide-show-nav-controls {
+  background: none;
+  border: none;
+  display: block;
+  font-size: 2em;
+  height: 100%;
+  opacity: 1;
+  padding: 0;
+  top: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 9; /* make sure the navigation controls are on top, but leave room if slides need to use multiple z layers */
+  /* flex centering needs more work when using multiple (left and right) div elements
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+.slide-show-nav-controls > div {
+  display: block;
+  position: absolute;
+  top: 50%; /* this plus below provides navigation control vertical centering */
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.slide-show-nav-controls > div > p:hover {
+  cursor: pointer;
+}
+
+.slide-show-nav-controls > .left-nav {
+  left: 0;
+  padding-left: 0.8em;
+  text-align: start;
+}
+.slide-show-nav-controls > .right-nav {
+  right: -1px;
+  padding-right: 0.8em;
+  text-align: end;
+}
+.slide-show-nav-controls > div > p {
+  background: #000;
+  background: rgba(0,0,0, .6);
+  clear: both;
+  color: #fff;
+  display: none;/* to hide currently unused nav buttons */
+  margin: 0;
+  opacity: 0.3;
+}
+.slide-show-nav-controls > div > p[data-goto-slide] {
+  display: inline;
+}
+
+.slide-show-nav-controls > .left-nav > p {
+  float: left;
+  padding: 10px 10px 15px 5px;
+  /* border-top-right-radius: 3px; */
+  /* border-bottom-right-radius: 3px; */
+}
+.slide-show-nav-controls > .right-nav > p {
+  float: right;
+  padding: 10px 5px 15px 10px;
+  /* border-top-left-radius: 3px; */
+  /* border-bottom-left-radius: 3px; */
+}
+
+.slide-show-nav-controls > div p:hover {
+  opacity: 1;
+}
+
+/* full screen control styling */
+.nav-fullscreen {
+  background: rgba(0,0,0,.4) url(../pictures/arrows-alt_ffffff_64.png);
+  -webkit-background-size: contain;
+  background-size: contain;
+  cursor: pointer;
+  display: block;
+  height: 32px;
+  margin: 0.3em 0 0 0.3em;
+  opacity: .3;
+  position: relative;
+  width: 32px;
+}
+
+.nav-fullscreen:hover {
+  opacity: .8;
+}
+
+/* tricky to use the fullscreen pseudo class.  It does not seem to play well if
+   multiple (comma separated) selectors are used for a single rule. By itself,
+   `:fullscreen .nav-fullscreen` works, but prefixed with
+   `:-ms-fullscreen ..nav-fullscreen,` it does not get triggered.  Without more
+   information, it does not seem safe to combine any of the vendor extension selectors in a single rule. */
+
+   /* :full-screen .nav-fullscreen, */
+/* :-webkit-full-screen .nav-fullscreen,
+:-moz-full-screen .nav-fullscreen,
+:-ms-fullscreen .nav-fullscreen, */
+
+:fullscreen .nav-fullscreen {
+    background: rgba(0,0,0,.4) url(../pictures/compress_ffffff_64.png);
+    /* background: red; */
+    -webkit-background-size: contain;
+    background-size: contain;
+}

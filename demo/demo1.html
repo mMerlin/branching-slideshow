@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Branching Slideshow demo 1</title>
+
+    <link rel="stylesheet" href="../css/branching-slideshow.css">
+    <link rel="stylesheet" href="../css/demo1.css">
+</head>
+<body>
+    <p>2 small slide shows on a single page, with no special setup needed.  No branching, no fullscreen, minimal styling.</p>
+    <article class="branching-slideshow">
+        <section>
+            <h2>Slide 1 header</h2>
+            <p>some basic content for slide 1</p>
+            <ul>
+                <li>a standard unordered list</li>
+                <li>with a couple of lines</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Slide 2 header</h2>
+            <p>some basic content for slide 2</p>
+            <ol>
+                <li>make this an ordered list</li>
+                <li>also with a couple of lines</li>
+            </ol>
+        </section>
+    </article>
+    <p>just a small separator between slide shows.</p>
+    <slideshow class="branching-slideshow">
+        <slide>
+            <p>short slide 1</p>
+        </slide>
+        <slide>
+            <p>short slide 2</p>
+        </slide>
+        <slide>
+            <p>short slide 3</p>
+        </slide>
+    </slideshow>
+
+    <script src="../js/branching-slideshow.js"></script>
+</body>
+</html>

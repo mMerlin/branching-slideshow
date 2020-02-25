@@ -1,0 +1,32 @@
+/* styling added for the branching slideshow demo 1 page */
+/* Use Alternate to box model, so specified sized includes border and padding */
+/* * { */
+	/* -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box; get from autoprefixer? */
+	/* box-sizing: border-box;
+} */
+
+section > h2 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* so far, have not been able to make the full screen specific styling work */
+/* :full-screen .current-slide
+.current-slide:full-screen
+.current-slide:full-screen .current-slide */
+/* work around: have javascript event that detects «in¦out» full screen events,
+and set class for css to use */
+
+.current-slide:-webkit-full-screen .current-slide,
+.current-slide:-moz-full-screen .current-slide,
+.current-slide:-ms-fullscreen .current-slide,
+.current-slide:fullscreen .current-slide,
+.current-slide:full-screen .current-slide {
+    background-color: red;
+}
+
+.current-slide {
+    background-color: green;
+}

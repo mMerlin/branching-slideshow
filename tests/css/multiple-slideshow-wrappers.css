@@ -1,0 +1,30 @@
+/* styling for the multiple slideshow wrappers test page */
+
+body > p {
+    border: 3px solid red;
+
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.2em auto 1em auto;
+}
+
+/* Expand the margins enough to avoid size issues conflicting with the navigation controls */
+.branching-slideshow > * {
+    border: 1rem solid aqua;
+    padding: 1em 1em 4em 1em;
+    background: #555; /* so full screen does not mess up totally */
+}
+
+/* .current-slide {
+    background-color: #555;
+} */

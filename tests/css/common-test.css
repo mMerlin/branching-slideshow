@@ -1,0 +1,30 @@
+/* styling added for the branching slideshow test 1 page */
+
+section > h2 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* tricky to use the fullscreen pseudo class.  It does not seem to play well if
+   multiple (comma separated) selectors are used for a single rule. By itself,
+   `:fullscreen .current-slide` works, but prefixed with
+   `:-ms-fullscreen .current-slide,` it does not get triggered.  Without more
+   information, it does not seem safe to combine any of the vendor extension selectors in a single rule. */
+
+/* :full-screen .current-slide */
+/* :-webkit-full-screen .current-slide {
+    background-color: red;
+}
+:-moz-full-screen .current-slide {
+    background-color: red;
+}
+:-ms-fullscreen .current-slide {
+    background-color: red;
+} */
+:fullscreen .current-slide {
+    background-color: #555;
+}
+
+/* .current-slide {
+    background-color: #555;
+} */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multiple Slideshow Wrappers test</title>
+
+    <link rel="stylesheet" href="../css/branching-slideshow.css">
+    <link rel="stylesheet" href="css/multiple-slideshow-wrappers.css">
+</head>
+<body>
+    <h1>Multiple Slideshows, same and different elements</h1>
+    <p>This page contains multiple slide shows using both the same and different html elements as the parent element wrapped around the slides.  Not a lot of variation (planned) for the slide elements.</p>
+
+    <h2>Slides inside of `span` slide show</h2>
+    <span class="branching-slideshow" data-full-screen="true">
+        <div><h3>1</h3><p>A simple slide</p></div>
+        <div><h3>2</h3><p>A simple slide</p></div>
+    </span>
+
+    <h2>Slides inside of `slideshow` slide show</h2>
+    <slideshow class="branching-slideshow" data-full-screen="true">
+        <div><h3>1</h3><p>A simple slide</p></div>
+        <div><h3>2</h3><p>A simple slide</p></div>
+    </slideshow>
+
+    <h2>Slides inside of `div` slide show</h2>
+    <div class="branching-slideshow" data-full-screen="true">
+        <div><h3>1</h3><p>A simple slide</p></div>
+        <div><h3>2</h3><p>A simple slide</p></div>
+    </div>
+
+    <h2>Slides inside of `section` slide show</h2>
+    <section class="branching-slideshow" data-full-screen="true">
+        <div><h3>1</h3><p>A simple slide</p></div>
+        <div><h3>2</h3><p>A simple slide</p></div>
+    </section>
+
+    <h2>Slides inside of `article` slide show</h2>
+    <article class="branching-slideshow" data-full-screen="true">
+        <div><h3>1</h3><p>A simple slide</p></div>
+        <div><h3>2</h3><p>A simple slide</p></div>
+    </article>
+
+    <h2>Slides inside of `ul` slide show</h2>
+    <ul class="branching-slideshow" data-full-screen="true">
+        <li><h3>1</h3><p>A simple slide</p></li>
+        <li><h3>2</h3><p>A simple slide</p></li>
+    </ul>
+
+    <h2>Slides inside of `ol` slide show</h2>
+    <ol class="branching-slideshow" data-full-screen="true">
+        <li><h3>1</h3><p>A simple slide</p></li>
+        <li><h3>2</h3><p>A simple slide</p></li>
+    </ol>
+
+    <h2>Slides inside of `em` slide show</h2>
+    <em class="branching-slideshow" data-full-screen="true">
+        <div><h3>1</h3><p>A simple slide</p></div>
+        <div><h3>2</h3><p>A simple slide</p></div>
+    </em>
+
+    <h2>Slides inside of `table` slide show</h2>
+    <table class="branching-slideshow" data-full-screen="true">
+        <tbody>
+            <tr><th>1</th></tr>
+            <tr><td>A simple slide</td></tr>
+        </tbody>
+        <tbody>
+            <tr><th>2</th></tr>
+            <tr><td>A simple slide</td></tr>
+        </tbody>
+    </table>
+
+    <script src="../js/branching-slideshow.js"></script>
+</body>
+</html>
